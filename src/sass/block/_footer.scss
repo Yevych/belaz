@@ -1,4 +1,48 @@
 // Footer
 .page-footer {
-	position: relative;
+  position: relative;
+  padding: 37px 0;
+  background-color: #191919;
+  color: #fff;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 191px;
+  }
+
+  &__copy {
+    font-size: 12px;
+    text-transform: uppercase;
+
+    &-img {
+      width: 100%;
+      max-width: 70px;
+      margin-left: 10px;
+      display: inline-block;
+    }
+  }
+
+  &__contacts {
+    span {
+      margin-bottom: 10px;
+      display: block;
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+
+  &__tel {
+    a {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
 }

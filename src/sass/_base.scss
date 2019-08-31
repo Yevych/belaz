@@ -26,6 +26,7 @@ a {
   &:hover,
   &:active {
     color: $link-color--hover;
+    text-decoration: none;
   }
 }
 

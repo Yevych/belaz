@@ -1,4 +1,46 @@
 // Header
 .page-header {
   position: relative;
+  padding: 24px 0;
+  background-color: #191919;
+  color: #fff;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 191px;
+  }
+
+  &__time-work {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__tel {
+    padding-right: 30px;
+
+    a {
+      margin-bottom: 10px;
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

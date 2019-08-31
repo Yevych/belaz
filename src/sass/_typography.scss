@@ -1,30 +1,41 @@
 //  Include fonts
 
-// font-family: 'Roboto';
+// font-family: 'ProximaNova';
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'ProximaNova';
   font-weight: normal;
-  src: local('Roboto'), local('Roboto-Regular');
-  src: url('../fonts/Roboto-Regular.eot');
-  src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-  //url('../fonts/Roboto-Regular.woff2') format('woff2'),
-  url('../fonts/Roboto-Regular.woff') format('woff'),
-  url('../fonts/Roboto-Regular.ttf') format('truetype'),
-  url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  src: local('ProximaNova'), local('ProximaNova-Regular');
+  src: url('../fonts/ProximaNova-Regular.eot');
+  src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ProximaNova-Regular.woff') format('woff'),
+  url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+  url('../fonts/ProximaNova-Regular.svg#Roboto-Regular') format('svg');
 }
 
-// font-family: 'Roboto';
+// font-family: 'ProximaNova';
 // font-weight: 700;
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'ProximaNova';
   font-weight: 700;
-  src: local('Roboto'), local('Roboto-Bold');
-  src: url('../fonts/Roboto-Bold.eot');
-  src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-  //url('../fonts/Roboto-Bold.woff2') format('woff2'),
-  url('../fonts/Roboto-Bold.woff') format('woff'),
-  url('../fonts/Roboto-Bold.ttf') format('truetype'),
-  url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+  src: local('ProximaNova'), local('Roboto-Black');
+  src: url('../fonts/ProximaNova-Black.eot');
+  src: url('../fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ProximaNova-Black.woff') format('woff'),
+  url('../fonts/ProximaNova-Black.ttf') format('truetype'),
+  url('../fonts/ProximaNova-Black.svg#Roboto-Black') format('svg');
+}
+
+// font-family: 'ProximaNova';
+// font-weight: 900;
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: 900;
+  src: local('ProximaNova'), local('Roboto-Extrabld');
+  src: url('../fonts/ProximaNova-Extrabld.eot');
+  src: url('../fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ProximaNova-Extrabld.woff') format('woff'),
+  url('../fonts/ProximaNova-Extrabld.ttf') format('truetype'),
+  url('../fonts/ProximaNova-Extrabld.svg#Roboto-Extrabld') format('svg');
 }
 
 // Main title style
