@@ -1,20 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Page Title</title>
-	<meta name="description" content="">
-	@@include('_include/head.html')
+    <meta charset="utf-8">
+    <title>Belaz</title>
+    <meta name="description" content="">
+    @@include('_include/head.html')
 </head>
 
 <body>
-	@@include('_include/header.html')
+@@include('_include/header.html')
 
-	<div class="page-container">
-		<h1>Hello world!</h1>
-	</div>
+<section class="hero">
+    <div class="page-container">
+        <div class="hero__content">
+            <h1 class="hero__title">Оригинальные запчасти для Белаз</h1>
+            <div class="hero__description">
+                с бесплатной доставкой в Ваш&nbsp; город!
+            </div>
+            <ul class="hero__advantages">
+                <li>
+                    <span class="marker">
+                        <img src="images/hero-list/piggy-bank.png" alt="piggy-bank">
+                    </span>
+                    <span>
+                        Дилерские цены - ниже на 20%, работаем без посредников!
+                    </span>
+                </li>
+                <li>
+                    <span class="marker">
+                        <img src="images/hero-list/delivery-truck-silhouette.png" alt="delivery-truck-silhouette">
+                    </span>
+                    <span>
+                        Срочная бесплатная доставка за 7 дней
+                    </span>
+                </li>
+                <li>
+                    <span class="marker">
+                        <img src="images/hero-list/calendar-with-star-symbol.png" alt="calendar-with-star-symbol">
+                    </span>
+                    Даем рассрочку 6 месяцев
+                </li>
+                <li>
+                    <span class="marker">
+                        <img src="images/hero-list/medal.png" alt="medal">
+                    </span>
+                    <span>Даем гарантию от 12 месяцев</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-	@@include('_include/footer.html')
-	@@include('_include/inc_script.html')
+@@include('_include/footer.html')
+@@include('_include/inc_script.html')
 </body>
 </html>

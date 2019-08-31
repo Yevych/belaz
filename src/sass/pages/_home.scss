@@ -1,0 +1,50 @@
+//Hero
+.hero {
+  background-image: url('../images/hero-bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    width: 100%;
+    max-width: 570px;
+    padding: 100px;
+    background-color: #f7b516;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin-bottom: 100px;
+    font-size: 25px;
+    font-weight: 900;
+  }
+
+  &__advantages {
+    @include clearlist();
+
+    li {
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .marker {
+        margin-right: 20px;
+      }
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
