@@ -192,17 +192,15 @@
     width: 25%;
     text-align: center;
 
-    &-icon {
-      width: 100%;
+    &-icon img {
       max-width: 100px;
       max-height: 93px;
-      margin: 0 auto 50px;
     }
 
     &-description {
       width: 100%;
       max-width: 220px;
-      margin: 0 auto;
+      margin: 50px auto;
       font-size: 18px;
       line-height: 1.2;
     }
@@ -223,13 +221,11 @@
   &__title {
     font-size: 30px;
     font-weight: 700;
-    //text-align: center;
   }
 
   &__subtitle {
     margin: 35px 0 55px;
     font-size: 20px;
-    //text-align: center;
   }
 
   &__form-wrapper {
@@ -274,6 +270,57 @@
         font-size: 30px;
         font-weight: 700;
         color: #fff;
+      }
+    }
+  }
+}
+
+//Transportation
+.transportation {
+  padding: 100px 0;
+  color: $text-color;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 100px;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__items {
+    margin: 0 -15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__item {
+    width: 33.33%;
+    padding: 0 15px;
+    text-align: center;
+
+    &-img img {
+      max-height: 300px;
+      max-width: 230px;
+    }
+
+    &-description {
+      width: 100%;
+      max-width: 335px;
+      margin: 40px auto;
+      font-size: 18px;
+    }
+
+    &-link {
+      color: $text-color;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: underline;
+
+      &:hover {
+        color: $text-color;
+        text-decoration: underline;
       }
     }
   }
