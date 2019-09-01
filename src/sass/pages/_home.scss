@@ -209,3 +209,72 @@
   }
 
 }
+
+//Search detail
+.search-detail {
+  padding: 100px 0;
+  background-image: url('../images/search-detail-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    //text-align: center;
+  }
+
+  &__subtitle {
+    margin: 35px 0 55px;
+    font-size: 20px;
+    //text-align: center;
+  }
+
+  &__form-wrapper {
+    margin: 0 -15px;
+    display: flex;
+
+    .field {
+      width: 33.33%;
+      padding: 0 15px;
+      position: relative;
+
+      &.tel {
+        margin-bottom: 30px;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: url(../images/form-icons/call-answer.png);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          right: 45px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &__call-back {
+    span {
+      display: block;
+      margin: 30px 0 15px;
+    }
+
+    &--tel {
+      a {
+        display: block;
+        font-size: 30px;
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+  }
+}

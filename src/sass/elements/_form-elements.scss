@@ -24,7 +24,9 @@ select {
 }
 
 input[type='submit'] {
-  padding: 32px 91px;
+  width: 100%;
+  max-width: 370px;
+  padding: 32px 40px;
   background-color: #1866af;
   color: #fff;
   font-size: 17px;
@@ -41,5 +43,24 @@ input[type='submit'] {
 
   &:focus {
     outline: none;
+  }
+}
+
+//Search detail form
+.search-detail__form {
+  input[type='text'],
+  input[type='tel'] {
+    padding: 27px 60px 27px 30px;
+  }
+
+  input[type='submit'] {
+    padding: 27px 40px;
+    background-color: #f7b516;
+    text-align: center;
+
+    &:hover {
+      background-color: darken(#f7b516, 10%);
+      transition: .2s all;
+    }
   }
 }
