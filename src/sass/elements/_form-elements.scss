@@ -8,14 +8,38 @@ input[type='password'],
 textarea,
 select {
   font-family: inherit;
+  font-size: 13px;
+  line-height: 1;
+  text-transform: uppercase;
   width: 100%;
   max-width: 100%;
   background: none;
   outline: 0 none;
-  border: 1px solid #dedede;
-  padding: 15px;
-  color: #333;
-  background-color: #fff;
-  margin-top: 8px;
-  margin-bottom: 12px;
+  border: none;
+  padding: 22px 60px 22px 30px;
+  color: #818181;
+  background-color: #f2f2f2;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input[type='submit'] {
+  padding: 32px 91px;
+  background-color: #1866af;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  border: none;
+  transition: .2s all;
+
+  &:hover {
+    background-color: darken(#1866af, 10%);
+    transition: .2s all;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }

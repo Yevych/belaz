@@ -48,3 +48,116 @@
     }
   }
 }
+
+//Price
+.price {
+  padding-top: 105px;
+  padding-bottom: 95px;
+  background-image: url('../images/price-bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 445px;
+    margin-left: auto;
+    margin-bottom: 55px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__form-wrapper {
+    width: 100%;
+    max-width: 770px;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .left-part {
+      width: 50%;
+      padding-right: 15px;
+    }
+
+    .right-part {
+      width: 50%;
+      padding-left: 15px;
+    }
+
+    .field {
+      position: relative;
+
+      &.email {
+        margin-bottom: 30px;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 18px;
+          background: url(../images/form-icons/envelope.png);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          right: 30px;
+          transform: translateY(-50%);
+        }
+      }
+
+      &.tel {
+        margin-bottom: 30px;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: url(../images/form-icons/call-answer.png);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          right: 30px;
+          transform: translateY(-50%);
+        }
+      }
+
+      &.time {
+        width: 100%;
+        max-width: 280px;
+        margin-left: auto;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 30px;
+          height: 30px;
+          background: url(../images/form-icons/clock.png);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+
+        span {
+          display: block;
+          padding-right: 60px;
+        }
+      }
+    }
+  }
+}

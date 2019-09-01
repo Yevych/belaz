@@ -16,12 +16,11 @@
   transition: .2s all;
 
   &--call {
-    padding: 17px 25px;
-    border: 2px solid #1669b3;
+    padding: 19px 26px;
 
     &:hover {
-      background-color: #fff;
-      color: #1669b3;
+      background-color: lighten(#1669b3, 10%);
+      color: #fff;
       transition: .2s all;
     }
   }
