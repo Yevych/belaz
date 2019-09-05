@@ -372,3 +372,46 @@
     }
   }
 }
+
+//Convenient
+.convenient {
+  padding: 100px 0;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 35px 0 95px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__items {
+    margin: 0 -15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__item {
+    width: 33.33%;
+    padding: 0 15px;
+    text-align: center;
+
+    &-icon img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    &-description {
+      width: 100%;
+      max-width: 240px;
+      margin: 50px auto;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+  }
+}
