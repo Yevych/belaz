@@ -507,3 +507,33 @@
     }
   }
 }
+
+//Office
+.office {
+  padding: 100px 0;
+  background-image: url('../images/office-bg.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__address {
+    margin-top: 100px;
+
+    address {
+      font-size: 18px;
+    }
+
+    &--tel {
+      a {
+        font-size: 24px;
+        font-weight: 700;
+        color: $text-color;
+      }
+    }
+  }
+}
