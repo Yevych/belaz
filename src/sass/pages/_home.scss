@@ -416,6 +416,66 @@
   }
 }
 
+//Warehouse
+.warehouse {
+  padding: 100px 0;
+  background-color: #0b3554;
+  color: #fff;
+  text-align: center;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    margin: 35px 0 95px;
+    font-size: 20px;
+  }
+
+  &__carousel-wrap {
+    position: relative;
+
+    .slick-arrow {
+      font-size: 30px;
+      color: #fff;
+      background-color: transparent;
+      outline: 0;
+      border: none;
+      padding: 0;
+      overflow: hidden;
+      cursor: pointer;
+    }
+  }
+
+  &__prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40px;
+    z-index: 10;
+  }
+
+  &__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    z-index: 10;
+  }
+
+  &__slider {
+    margin: 0 -15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slide {
+    width: 33.33%;
+    padding: 0 15px;
+  }
+}
+
 //Team
 .team {
   padding: 100px 0;

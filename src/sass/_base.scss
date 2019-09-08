@@ -40,6 +40,10 @@ section {
   position: relative;
 }
 
+button:focus {
+  outline: 0 none;
+}
+
 .page-container {
   max-width: $container-width;
   margin-left: auto;
