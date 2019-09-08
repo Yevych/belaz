@@ -64,3 +64,26 @@ input[type='submit'] {
     }
   }
 }
+
+//Consultation form
+.consultation__form {
+  width: 100%;
+  max-width: 770px;
+  margin: 65px auto 0;
+
+  input[type='text'],
+  input[type='tel'] {
+    padding: 27px 60px 27px 30px;
+  }
+
+  input[type='submit'] {
+    padding: 27px 40px;
+    background-color: #f7b516;
+    text-align: center;
+
+    &:hover {
+      background-color: darken(#f7b516, 10%);
+      transition: .2s all;
+    }
+  }
+}
