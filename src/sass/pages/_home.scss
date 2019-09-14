@@ -373,6 +373,148 @@
   }
 }
 
+//Questions
+.questions {
+  padding: 100px 0;
+  background-color: #0b3554;
+  color: #fff;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 35px 0 95px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__row {
+    margin: 0 -15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left-part {
+    width: 50%;
+    padding: 0 15px;
+  }
+
+  &__list {
+    padding-left: 20px;
+
+    li {
+      padding-left: 30px;
+      margin-bottom: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      position: relative;
+      color: #fff;
+      transition: .2s all;
+
+      .accent {
+        display: inline-block;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s all;
+
+        &:hover {
+          color: #579eff;
+          transition: .2s all;
+        }
+      }
+
+      .open-list {
+        display: inline-block;
+      }
+    }
+
+    &--wrap {
+      display: none;
+      position: absolute;
+      z-index: 10;
+    }
+
+    &--description {
+      width: 100%;
+      max-width: 330px;
+      margin-top: 25px;
+      padding: 15px 45px 20px 15px;
+      background-color: #fff;
+      color: $text-color;
+      font-size: 14px;
+      font-weight: 400;
+      position: relative;
+      box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.75);
+
+      &:before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 15px;
+        transform: rotate(45deg) skew(0deg);
+        background-color: #fff;
+        position: absolute;
+        top: -3px;
+        left: 15px;
+      }
+    }
+
+    &--close {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 10;
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 90%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: rotate(45deg);
+
+        &:last-of-type {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__load-more {
+    &--text {
+      margin-left: 20px;
+      font-size: 14px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__right-part {
+    width: 50%;
+    padding: 0 15px;
+
+    &--image {
+      position: relative;
+    }
+
+    &--accent-text {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(11,53,84, .8);
+      padding: 9px 30px 9px 20px;
+    }
+  }
+}
+
 //Convenient
 .convenient {
   padding: 100px 0;

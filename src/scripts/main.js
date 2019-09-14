@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   //Warehouse slider
   $('.warehouse__slider').slick({
     dots: false,
@@ -10,4 +10,22 @@ $(document).ready(function() {
     prevArrow: $('.warehouse__prev'),
     nextArrow: $('.warehouse__next'),
   })
-});
+
+  //List
+  let triggerList = $('.js-trigger-list')
+  triggerList.on('click', function () {
+    let self = $(this)
+    triggerList.not(self).removeClass('open-list').siblings().fadeOut(500)
+    if (self.hasClass('open-list')) {
+      self.removeClass('open-list').siblings().fadeOut(500)
+    } else {
+      self.addClass('open-list').siblings().fadeIn()
+    }
+  })
+
+  let closeToolbar = $('.js-close-list')
+  let toolBar = $('.questions__list--wrap')
+  closeToolbar.on('click', function () {
+    toolBar.fadeOut()
+  })
+})
