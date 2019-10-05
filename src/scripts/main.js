@@ -36,4 +36,21 @@ $(document).ready(function () {
   closeToolbar.on('click', function () {
     toolBar.fadeOut()
   })
+
+  //load first 4 elements, click "load more"
+  let listItems = $('.questions__list > li'),
+      listItemsCount = listItems.length,
+      loadMore = $('.questions__load-more'),
+      x = 4
+
+  listItems.hide().slice(0, x).show()
+  loadMore.on('click', function (e) {
+    e.preventDefault()
+    x++
+    listItems.slice(0, x).show()
+
+    if ($('.questions__list > li:visible').length === listItemsCount) {
+      loadMore.hide();
+    }
+  })
 })
