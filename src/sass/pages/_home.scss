@@ -1,5 +1,6 @@
 //Hero
 .hero {
+  padding: 0;
   background-image: url('../images/hero-bg.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -10,6 +11,28 @@
     max-width: 570px;
     padding: 100px;
     background-color: #f7b516;
+
+    @include max-w($screen-iPad-landscape) {
+      padding: 75px;
+    }
+
+    @include max-w($screen-lg) {
+      max-width: 500px;
+      padding: 50px;
+    }
+
+    @include max-w($screen-md) {
+      max-width: 480px;
+      padding: 40px;
+    }
+
+    @include max-w($screen-sm) {
+      padding: 30px;
+    }
+
+    @include max-w(320px) {
+      padding: 20px 15px;
+    }
   }
 
   &__title {
@@ -17,12 +40,28 @@
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include max-w($screen-xxl) {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (40 - 28) + 28px);
+    }
+
+    @include max-w($screen-lg) {
+      margin-bottom: 30px;
+    }
   }
 
   &__description {
     margin-bottom: 100px;
     font-size: 25px;
     font-weight: 900;
+
+    @include max-w($screen-xxl) {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (25 - 18) + 18px);
+    }
+
+    @include max-w($screen-lg) {
+      margin-bottom: 50px;
+    }
   }
 
   &__advantages {
@@ -32,6 +71,10 @@
       margin-bottom: 40px;
       display: flex;
       align-items: center;
+
+      @include max-w($screen-lg) {
+        margin-bottom: 30px;
+      }
 
       &:last-of-type {
         margin-bottom: 0;
@@ -72,6 +115,10 @@
     margin-bottom: 55px;
     font-size: 30px;
     font-weight: 700;
+
+    @include max-w($screen-xxl) {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (30 - 24) + 24px);
+    }
   }
 
   &__form-wrapper {
@@ -79,17 +126,40 @@
     max-width: 770px;
     margin-left: auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include max-w($screen-xl-sm) {
+      flex-direction: column;
+    }
 
     .left-part {
       width: 50%;
       padding-right: 15px;
+
+      @include max-w($screen-md) {
+        padding-right: 7.5px;
+      }
+
+      @include max-w($screen-xl-sm) {
+        width: 100%;
+        padding-right: 0;
+      }
     }
 
     .right-part {
       width: 50%;
       padding-left: 15px;
+
+      @include max-w($screen-md) {
+        padding-left: 7.5px;
+      }
+
+      @include max-w($screen-xl-sm) {
+        width: 100%;
+        padding-left: 0;
+      }
     }
 
     .field {
@@ -97,6 +167,10 @@
 
       &.email {
         margin-bottom: 30px;
+
+        @include max-w($screen-md) {
+          margin-bottom: 15px;
+        }
 
         &:after {
           content: '';
@@ -116,6 +190,10 @@
 
       &.tel {
         margin-bottom: 30px;
+
+        @include max-w($screen-md) {
+          margin-bottom: 15px;
+        }
 
         &:after {
           content: '';
@@ -137,6 +215,10 @@
         width: 100%;
         max-width: 280px;
         margin-left: auto;
+
+        @include max-w($screen-xl-sm) {
+          display: none;
+        }
 
         &:after {
           content: '';
@@ -164,27 +246,22 @@
 
 //Wait
 .wait {
-  padding: 100px 0;
   background-color: #08243e;
   color: #fff;
-
-  &__title {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-  }
-
-  &__subtitle {
-    margin: 35px 0 95px;
-    font-size: 20px;
-    text-align: center;
-  }
 
   &__items {
     margin: 0 -15px;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include max-w($screen-lg) {
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+    }
   }
 
   &__item {
@@ -192,9 +269,32 @@
     width: 25%;
     text-align: center;
 
+    @include max-w($screen-lg) {
+      width: 50%;
+    }
+
+    @include max-w($screen-xl-sm) {
+      width: 100%;
+    }
+
+    @include max-w($screen-sm) {
+      margin-bottom: 50px;
+    }
+
+    &:last-of-type {
+      @include max-w($screen-sm) {
+        margin-bottom: 0;
+      }
+    }
+
     &-icon img {
       max-width: 100px;
       max-height: 93px;
+
+      @include max-w($screen-md) {
+        max-width: 80px;
+        max-height: 73px;
+      }
     }
 
     &-description {
@@ -203,6 +303,14 @@
       margin: 50px auto;
       font-size: 18px;
       line-height: 1.2;
+
+      @include max-w($screen-md) {
+        font-size: 16px;
+      }
+
+      @include max-w($screen-sm) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -210,7 +318,6 @@
 
 //Search detail
 .search-detail {
-  padding: 100px 0;
   background-image: url('../images/search-detail-bg.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -218,27 +325,52 @@
   color: #fff;
   text-align: center;
 
-  &__title {
+  .section-title {
     font-size: 30px;
-    font-weight: 700;
+
+    @include max-w($screen-xxl) {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (30 - 22) + 22px);
+    }
   }
 
-  &__subtitle {
+  .section-subtitle {
     margin: 35px 0 55px;
-    font-size: 20px;
   }
 
   &__form-wrapper {
     margin: 0 -15px;
     display: flex;
+    flex-direction: row;
+
+    @include max-w($screen-md) {
+      margin: 0 -7.5px;
+    }
+
+    @include max-w(767px) {
+      max-width: 560px;
+      margin: 0 auto;
+      flex-direction: column;
+    }
 
     .field {
       width: 33.33%;
       padding: 0 15px;
       position: relative;
 
+      @include max-w($screen-md) {
+        padding: 0 7.5px;
+      }
+
+      @include max-w(767px) {
+        width: 100%;
+      }
+
       &.tel {
         margin-bottom: 30px;
+
+        @include max-w(767px) {
+          margin-bottom: 15px;
+        }
 
         &:after {
           content: '';
@@ -253,6 +385,20 @@
           top: 50%;
           right: 45px;
           transform: translateY(-50%);
+
+          @include max-w($screen-lg) {
+            right: 35px;
+          }
+
+          @include max-w($screen-md) {
+            right: 25px;
+          }
+        }
+      }
+
+      &.vendor-code {
+        @include max-w(767px) {
+          margin-bottom: 15px;
         }
       }
     }
@@ -270,6 +416,10 @@
         font-size: 30px;
         font-weight: 700;
         color: #fff;
+
+        @include max-w($screen-md) {
+          font-size: 28px;
+        }
       }
     }
   }
@@ -277,22 +427,27 @@
 
 //Transportation
 .transportation {
-  padding: 100px 0;
   color: $text-color;
   text-align: center;
 
-  &__title {
+  .section-title {
     margin-bottom: 100px;
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
+
+    @include max-w($screen-sm) {
+      margin-bottom: 50px;
+    }
   }
 
   &__items {
     margin: 0 -15px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include max-w(767px) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -300,9 +455,25 @@
     padding: 0 15px;
     text-align: center;
 
+    @include max-w(767px) {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    &:last-of-type {
+      @include max-w(767px) {
+        margin-bottom: 0;
+      }
+    }
+
     &-img img {
       max-height: 300px;
       max-width: 230px;
+
+      @include max-w($screen-lg) {
+        max-height: 270px;
+        max-width: 200px;
+      }
     }
 
     &-description {
@@ -310,6 +481,10 @@
       max-width: 335px;
       margin: 40px auto;
       font-size: 18px;
+
+      @include max-w($screen-md) {
+        font-size: 16px;
+      }
     }
 
     &-link {
@@ -328,28 +503,53 @@
 
 //Bonus
 .bonus {
-  padding: 100px 0;
   background-color: #08243e;
   color: #fff;
 
-  &__title {
+  .section-title {
     margin-bottom: 100px;
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
+
+    @include max-w($screen-sm) {
+      margin-bottom: 50px;
+    }
   }
 
   &__items {
     margin: 0 -15px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include max-w($screen-lg) {
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+    }
   }
 
   &__item {
     width: 25%;
     padding: 0 15px;
     text-align: center;
+
+    @include max-w($screen-lg) {
+      width: 50%;
+    }
+
+    @include max-w($screen-xl-sm) {
+      width: 100%;
+    }
+
+    @include max-w($screen-sm) {
+      margin-bottom: 40px;
+    }
+
+    &:last-of-type {
+      @include max-w($screen-sm) {
+        margin-bottom: 0;
+      }
+    }
 
     &-icon {
       width: 100px;
@@ -369,37 +569,43 @@
       max-width: 245px;
       margin: 40px auto;
       font-size: 18px;
+
+      @include max-w($screen-md) {
+        font-size: 16px;
+      }
+
+      @include max-w($screen-sm) {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
 //Questions
 .questions {
-  padding: 100px 0;
   background-color: #0b3554;
   color: #fff;
-
-  &__title {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-  }
-
-  &__subtitle {
-    margin: 35px 0 95px;
-    font-size: 20px;
-    text-align: center;
-  }
 
   &__row {
     margin: 0 -15px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+
+    @include max-w(767px) {
+      flex-direction: column;
+    }
   }
 
   &__left-part {
     width: 50%;
     padding: 0 15px;
+
+    @include max-w(767px) {
+      width: 100%;
+      max-width: 560px;
+      margin: 0 auto;
+    }
   }
 
   &__list {
@@ -413,6 +619,15 @@
       position: relative;
       color: #fff;
       transition: .2s all;
+
+      @include max-w($screen-lg) {
+        margin-bottom: 30px;
+      }
+
+      @include max-w($screen-sm) {
+        padding-left: 15px;
+        font-size: 15px;
+      }
 
       .accent {
         display: inline-block;
@@ -449,6 +664,10 @@
       position: relative;
       box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.75);
 
+      @include max-w($screen-sm) {
+        padding-right: 35px;
+      }
+
       &:before {
         content: '';
         display: block;
@@ -459,6 +678,10 @@
         position: absolute;
         top: -3px;
         left: 15px;
+      }
+
+      p:last-of-type {
+        margin-bottom: 0;
       }
     }
 
@@ -501,6 +724,13 @@
     width: 50%;
     padding: 0 15px;
 
+    @include max-w(767px) {
+      width: 100%;
+      max-width: 530px;
+      margin: 0 auto 30px;
+      order: -1;
+    }
+
     &--image {
       position: relative;
     }
@@ -511,37 +741,47 @@
       bottom: 0;
       background-color: rgba(11,53,84, .8);
       padding: 9px 30px 9px 20px;
+
+      @include max-w($screen-sm) {
+        padding-right: 20px;
+        font-size: 12px;
+      }
     }
   }
 }
 
 //Convenient
 .convenient {
-  padding: 100px 0;
-
-  &__title {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-  }
-
-  &__subtitle {
-    margin: 35px 0 95px;
-    font-size: 20px;
-    text-align: center;
-  }
-
   &__items {
     margin: 0 -15px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include max-w(767px) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     width: 33.33%;
     padding: 0 15px;
     text-align: center;
+
+    @include max-w(767px) {
+      width: 100%;
+    }
+
+    @include max-w($screen-sm) {
+      margin-bottom: 50px;
+    }
+
+    &:last-of-type {
+      @include max-w($screen-sm) {
+        margin-bottom: 0;
+      }
+    }
 
     &-icon img {
       max-width: 100px;
@@ -554,26 +794,23 @@
       margin: 50px auto;
       font-size: 18px;
       line-height: 1.2;
+
+      @include max-w($screen-md) {
+        font-size: 16px;
+      }
+
+      @include max-w($screen-sm) {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
 //Warehouse
 .warehouse {
-  padding: 100px 0;
   background-color: #0b3554;
   color: #fff;
   text-align: center;
-
-  &__title {
-    font-size: 36px;
-    font-weight: 700;
-  }
-
-  &__subtitle {
-    margin: 35px 0 95px;
-    font-size: 20px;
-  }
 
   &__carousel-wrap {
     position: relative;
@@ -587,6 +824,10 @@
       padding: 0;
       overflow: hidden;
       cursor: pointer;
+
+      @include max-w($screen-md) {
+        font-size: 25px;
+      }
     }
   }
 
@@ -596,6 +837,10 @@
     transform: translateY(-50%);
     left: 40px;
     z-index: 10;
+
+    @include max-w($screen-lg) {
+      left: 30px;
+    }
   }
 
   &__next {
@@ -604,42 +849,82 @@
     transform: translateY(-50%);
     right: 40px;
     z-index: 10;
+
+    @include max-w($screen-lg) {
+      right: 30px;
+    }
   }
 
   &__slider {
     margin: 0 -15px;
     display: flex;
     justify-content: space-between;
+
+    @include max-w($screen-lg) {
+      margin: 0 -7.5px;
+    }
   }
 
   &__slide {
     width: 33.33%;
     padding: 0 15px;
+
+    @include max-w($screen-lg) {
+      padding: 0 7.5px;
+    }
+
+    @include max-w($screen-md) {
+      width: 100%;
+    }
+
+    img {
+      margin: 0 auto;
+    }
   }
 }
 
 //Team
 .team {
-  padding: 100px 0;
   color: $text-color;
   text-align: center;
 
-  &__title {
+  .section-title {
     margin-bottom: 100px;
-    font-size: 36px;
-    font-weight: 700;
+
+    @include max-w($screen-sm) {
+      margin-bottom: 50px;
+    }
   }
 
   &__items {
     margin: 0 -15px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include max-w(767px) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     width: 33.33%;
     padding: 0 15px;
+
+    @include max-w(767px) {
+      width: 100%;
+    }
+
+    @include max-w($screen-sm) {
+      margin-bottom: 40px;
+    }
+
+    &:last-of-type {
+      @include max-w($screen-sm) {
+        margin-bottom: 0;
+      }
+    }
 
     &-icon {
       width: 170px;
@@ -652,6 +937,16 @@
       border-radius: 50%;
       font-size: 30px;
       font-weight: 700;
+
+      @include max-w($screen-md) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @include max-w($screen-sm) {
+        width: 130px;
+        height: 130px;
+      }
     }
 
     &-description {
@@ -659,13 +954,20 @@
       max-width: 305px;
       margin: 40px auto;
       font-size: 18px;
+
+      @include max-w($screen-md) {
+        font-size: 16px;
+      }
+
+      @include max-w($screen-sm) {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
 //Consultation
 .consultation {
-  padding: 100px 0;
   background-color: #0d324d;
   color: #fff;
   background-image: url('../images/consultation-bg.png');
@@ -674,22 +976,40 @@
   //background-size: cover;
   text-align: center;
 
-  &__title {
+  .section-title {
     font-size: 30px;
-    font-weight: 700;
+
+    @include max-w($screen-xxl) {
+      font-size: calc((100vw - 320px) / (1400 - 320) * (30 - 22) + 22px);
+    }
   }
 
   &__form-wrapper {
     margin: 0 -15px;
     display: flex;
+    flex-direction: row;
+
+    @include max-w($screen-md) {
+      max-width: 400px;
+      margin: 0 auto;
+      flex-direction: column;
+    }
 
     .field {
       width: 50%;
       padding: 0 15px;
       position: relative;
 
+      @include max-w($screen-md) {
+        width: 100%;
+      }
+
       &.tel {
         margin-bottom: 30px;
+
+        @include max-w($screen-md) {
+          margin-bottom: 15px;
+        }
 
         &:after {
           content: '';
@@ -712,22 +1032,28 @@
 
 //Office
 .office {
-  padding: 100px 0;
   background-image: url('../images/office-bg.png');
   background-position: center center;
   background-repeat: no-repeat;
   text-align: center;
 
-  &__title {
+  .section-title {
     font-size: 30px;
-    font-weight: 700;
   }
 
   &__address {
     margin-top: 100px;
 
+    @include max-w($screen-xl-sm) {
+      margin-top: 70px;
+    }
+
     address {
       font-size: 18px;
+
+      @include max-w($screen-md) {
+        font-size: 16px;
+      }
     }
 
     &--tel {
@@ -735,6 +1061,10 @@
         font-size: 24px;
         font-weight: 700;
         color: $text-color;
+
+        @include max-w($screen-md) {
+          font-size: 22px;
+        }
       }
     }
   }

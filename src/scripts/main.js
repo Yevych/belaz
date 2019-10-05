@@ -9,6 +9,14 @@ $(document).ready(function () {
     slidesToScroll: 1,
     prevArrow: $('.warehouse__prev'),
     nextArrow: $('.warehouse__next'),
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   })
 
   //List

@@ -7,18 +7,31 @@
 
   &__wrapper {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @include max-w(767px) {
+      flex-direction: column;
+    }
   }
 
   &__logo {
     width: 100%;
     max-width: 191px;
+
+    @include max-w(767px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__copy {
     font-size: 12px;
     text-transform: uppercase;
+
+    @include max-w(767px) {
+      margin-bottom: 15px;
+    }
 
     &-img {
       width: 100%;

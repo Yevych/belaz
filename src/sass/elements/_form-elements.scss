@@ -21,6 +21,12 @@ select {
   background-color: #f2f2f2;
   margin-top: 0;
   margin-bottom: 0;
+
+  @include max-w($screen-md) {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 input[type='submit'] {
@@ -35,6 +41,11 @@ input[type='submit'] {
   text-transform: uppercase;
   border: none;
   transition: .2s all;
+
+  @include max-w($screen-md) {
+    padding: 20px 40px;
+    font-size: 15px;
+  }
 
   &:hover {
     background-color: darken(#1866af, 10%);
@@ -51,12 +62,25 @@ input[type='submit'] {
   input[type='text'],
   input[type='tel'] {
     padding: 27px 60px 27px 30px;
+
+    @include max-w($screen-lg) {
+      padding: 27px 25px;
+    }
+
+    @include max-w($screen-md) {
+      padding: 22px 20px;
+    }
   }
 
   input[type='submit'] {
     padding: 27px 40px;
     background-color: #f7b516;
     text-align: center;
+
+    @include max-w($screen-md) {
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
 
     &:hover {
       background-color: darken(#f7b516, 10%);
@@ -74,12 +98,22 @@ input[type='submit'] {
   input[type='text'],
   input[type='tel'] {
     padding: 27px 60px 27px 30px;
+
+    @include max-w($screen-md) {
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
   }
 
   input[type='submit'] {
     padding: 27px 40px;
     background-color: #f7b516;
     text-align: center;
+
+    @include max-w($screen-md) {
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
 
     &:hover {
       background-color: darken(#f7b516, 10%);

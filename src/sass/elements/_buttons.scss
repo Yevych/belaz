@@ -18,6 +18,18 @@
   &--call {
     padding: 19px 26px;
 
+    @include max-w($screen-sm) {
+      padding: 15px 18px;
+    }
+
+    @include max-w(360px) {
+      font-size: 10px;
+    }
+
+    @include max-w(320px) {
+      padding: 15px;
+    }
+
     &:hover {
       background-color: lighten(#1669b3, 10%);
       color: #fff;

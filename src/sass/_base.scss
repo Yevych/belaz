@@ -37,7 +37,36 @@ img {
 }
 
 section {
+  padding: 100px 0;
   position: relative;
+
+  @include max-w($screen-md) {
+    padding: 70px 0;
+  }
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+
+  @include max-w($screen-xxl) {
+    font-size: calc((100vw - 320px) / (1400 - 320) * (36 - 24) + 24px);
+  }
+}
+
+.section-subtitle {
+  margin: 35px 0 95px;
+  font-size: 20px;
+  text-align: center;
+
+  @include max-w($screen-xxl) {
+    font-size: calc((100vw - 320px) / (1400 - 320) * (20 - 17) + 17px);
+  }
+
+  @include max-w($screen-sm) {
+    margin-bottom: 50px;
+  }
 }
 
 button:focus {

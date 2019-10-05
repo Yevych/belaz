@@ -14,12 +14,28 @@
   &__logo {
     width: 100%;
     max-width: 191px;
+
+    @include max-w($screen-sm) {
+      max-width: 171px;
+    }
+
+    @include max-w(360px) {
+      max-width: 161px;
+    }
+
+    @include max-w(320px) {
+      max-width: 151px;
+    }
   }
 
   &__time-work {
     font-size: 12px;
     line-height: 1.5;
     text-align: center;
+
+    @include max-w($screen-md) {
+      display: none;
+    }
   }
 
   &__contacts {
@@ -30,6 +46,10 @@
 
   &__tel {
     padding-right: 30px;
+
+    @include max-w($screen-md) {
+      display: none;
+    }
 
     a {
       margin-bottom: 10px;
