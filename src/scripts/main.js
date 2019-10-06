@@ -20,9 +20,9 @@ $(document).ready(function () {
   })
 
   //List
-  let triggerList = $('.js-trigger-list')
+  var triggerList = $('.js-trigger-list')
   triggerList.on('click', function () {
-    let self = $(this)
+    var self = $(this)
     triggerList.not(self).removeClass('open-list').siblings().fadeOut(500)
     if (self.hasClass('open-list')) {
       self.removeClass('open-list').siblings().fadeOut(500)
@@ -31,14 +31,14 @@ $(document).ready(function () {
     }
   })
 
-  let closeToolbar = $('.js-close-list')
-  let toolBar = $('.questions__list--wrap')
+  var closeToolbar = $('.js-close-list')
+  var toolBar = $('.questions__list--wrap')
   closeToolbar.on('click', function () {
     toolBar.fadeOut()
   })
 
   //load first 4 elements, click "load more"
-  let listItems = $('.questions__list > li'),
+  var listItems = $('.questions__list > li'),
       listItemsCount = listItems.length,
       loadMore = $('.questions__load-more'),
       x = 4
